@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router";
 import HomePage from "./pages/HomePage";
 import CreatePage from "./pages/CreatePage";
 import NoteDetailPage from "./pages/NoteDetailPage";
+import NotFound from "./pages/NotFound";
 import toast from "react-hot-toast";
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/create" element={<CreatePage />} />
         <Route path="/notes/:id" element={<NoteDetailPage />} />
+        <Route path="*" element={<NotFound />} />
         <Route />
       </Routes>
     </div>

@@ -28,6 +28,14 @@ app.use(rateLimiter);
 
 app.use("/api/notes", notesRoutes);
 
+// Handle 404 API requests
+app.use((req, res, next) => {
+  if (req.originalUrl.startsWith("/api")) {
+    return res.status(404).json({ message: "API route not found" });
+  }
+  next(); // forward to frontend
+});
+
 if (process.env.NODE_ENV === "production") {
   // serve optimized react application as a static asset
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
