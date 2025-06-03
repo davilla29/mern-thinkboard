@@ -13,6 +13,8 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 const __dirname = path.resolve();
 
+app.set("trust proxy", 1); // Trust only the first proxy (recommended for Render)
+
 // Middleware
 
 if (process.env.NODE_ENV !== "production") {
@@ -24,6 +26,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 app.use(express.json()); // this middleware will parse JSON bodies: req.body
+
 app.use(rateLimiter);
 
 app.use("/api/notes", notesRoutes);
