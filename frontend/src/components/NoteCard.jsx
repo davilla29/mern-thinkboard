@@ -31,7 +31,9 @@ const NoteCard = ({ note, setNotes }) => {
       >
         <div className="card-body">
           <h3 className="card-title text-base-content">{note.title}</h3>
-          <p className="text-base-content/70 line-clamp-3">{note.content}</p>
+          <textarea className="w-full h-auto overflow-hidden bg-transparent resize-none bg-card text-base-content/70 line-clamp-3">
+            {note.content}
+          </textarea>
           <span className="text-sm text-base-content/60">
             <p> Created at: {formatDate(new Date(note.createdAt))}</p>
             <p>Updated at: {formatDate(new Date(note.updatedAt))}</p>
