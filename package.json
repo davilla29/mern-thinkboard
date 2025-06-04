@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davilla29/mern-thinkboard.git"
+    "url": "git+https://github.com/davilla29/notely.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/davilla29/mern-thinkboard/issues"
+    "url": "https://github.com/davilla29/notely/issues"
   },
-  "homepage": "https://github.com/davilla29/mern-thinkboard#readme"
+  "homepage": "https://github.com/davilla29/notely#readme"
 }
